@@ -9,7 +9,10 @@ public class HottubOffCommand implements Command {
     }
 
     public void execute() {
-        hottub.cool();
+        hottub.setTemperature(98);
         hottub.off();
+    }
+    public void undo() {
+        hottub.on();
     }
 }

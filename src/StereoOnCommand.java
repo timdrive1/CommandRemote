@@ -1,18 +1,18 @@
 /**
  * Created by Тим on 04.06.2017.
  */
-public class StereoOffCommand implements Command {
+public class StereoOnCommand implements Command {
     Stereo stereo;
 
-    public StereoOffCommand(Stereo stereo) {
+    public StereoOnCommand(Stereo stereo) {
         this.stereo = stereo;
     }
 
     public void execute() {
-        stereo.off();
+        stereo.on();
     }
 
     public void undo() {
-        stereo.on();
+        stereo.off();
     }
 }

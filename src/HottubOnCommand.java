@@ -7,10 +7,12 @@ public class HottubOnCommand implements Command {
     public HottubOnCommand(Hottub hottub) {
         this.hottub = hottub;
     }
-
     public void execute() {
         hottub.on();
-        hottub.heat();
+        hottub.setTemperature(104);
         hottub.bubblesOn();
+    }
+    public void undo() {
+        hottub.off();
     }
 }
